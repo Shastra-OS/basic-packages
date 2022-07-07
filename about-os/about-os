@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+if [[ -e '/version' ]]; then
+	version="v`cat /version | cut -d'.' -f1`.`cat /version | cut -d '.' -f2`"
+else
+	version='rolling'
+fi
+
+yad --title='About ShastraOS' --window-icon='shastraos-icon02' \
+	--about \
+	--pname='ShastraOS' \
+	--pversion="$version" \
+	--image='distributor-logo-shastraos' \
+	--comments="Next generation decentralized desktop OS. Built on Arch Linux" \
+	--copyright="Copyright 2022-`date +'%Y'`, ShastraOS" \
+	--license='GPL3' \
+	--website='https://shastraos.co' \
+	--website-label='shastraos.co' \
+	--authors="Vivek Pal <vivekpal.in>"

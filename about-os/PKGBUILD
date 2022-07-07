@@ -1,0 +1,25 @@
+# Maintainer: Vivek Pal <vivek@shastra.co>
+
+pkgname=about-shastraos
+pkgver=0.1
+pkgrel=1
+pkgdesc="About ShastraOS basic application"
+url="https://github.com/shastraos/basic-packages"
+arch=('any')
+license=('GPL3')
+makedepends=()
+depends=('yad')
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+
+source=(about-os
+		about.desktop)
+
+sha256sums=('5e2849847780d9021324bf833de36a3c2f0835943ce6385e70aff28388ac3736'
+			'9ce47e7f93711454228ffcfbcb429f3c0ea5750de9bdf3d60e6981a21a2f7040')
+
+package() {
+	install -Dm 755 about-os   		${pkgdir}/usr/local/bin/about-os
+	install -Dm 644 about.desktop	${pkgdir}/usr/share/applications/about.desktop
+}
