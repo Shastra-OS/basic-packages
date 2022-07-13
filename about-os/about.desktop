@@ -2,6 +2,6 @@
 Name=About ShastraOS
 Comment=About OS
 Exec=about-os
-Icon=shastraos-icon02
+Icon=shastraos
 Type=Application
 Categories=System;

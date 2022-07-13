@@ -6,7 +6,7 @@ else
 	version='rolling'
 fi
 
-yad --title='About ShastraOS' --window-icon='shastraos-icon02' \
+yad --title='About ShastraOS' --window-icon='shastraos' \
 	--about \
 	--pname='ShastraOS' \
 	--pversion="$version" \
